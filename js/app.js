@@ -12,8 +12,7 @@ const setMeta=(t,d)=>{document.title=`${t} | ${SITE}`;const m=document.querySele
 
 const links=[['index.html','home',cityName],['story.html','story','The Story'],['methodology.html','methodology','Methodology'],['sources.html','sources','Sources'],['about.html','about','About'],['contact.html','contact','Contact']];
 B.insertAdjacentHTML('afterbegin',`<a class="skip" href="#app">Skip to content</a><header class="site"><div class="wrap"><a class="brand" href="index.html">${SITE}</a><nav aria-label="Main">${links.map(([h,p,l])=>`<a href="${h}"${p===page||(p==='home'&&page==='interview')?' aria-current="page"':''}>${l}</a>`).join('')}</nav></div></header>`);
-B.insertAdjacentHTML('beforeend',`<footer class="site"><div class="wrap">${SITE}, an oral history project.</div></footer>`);
-
+B.insertAdjacentHTML('beforeend',`<footer class="site"><div class="wrap foot"><div><p class="fb">${SITE}</p><p>Local leaders in ${cityName}, in their own voices.</p></div><nav aria-label="Footer">${links.map(([h,p,l])=>`<a href="${h}">${l}</a>`).join('')}</nav></div></footer>`);
 if(page==='home')Promise.all([load('interviews.json'),load('story.json')]).then(([iv,st])=>{
   const q=st.pullQuotes||[];
   $('#quote').innerHTML=q[0]?`<blockquote class="hero-quote">${esc(q[0])}</blockquote><p><a href="story.html">Read the full story</a></p>`:'';
@@ -40,3 +39,18 @@ if(page==='story')load('story.json').then(s=>{
 if(page==='sources')load('sources.json').then(s=>{
   $('#list').innerHTML=s.length?s.map(x=>{const m=[x.author,x.type,x.year].filter(Boolean).join(', ');return`<li class="src"><p class="t">${x.url?`<a href="${esc(x.url)}">${esc(x.title)}</a>`:esc(x.title)}</p><p class="meta">${esc(m)}${x.accessed?`. Accessed ${esc(x.accessed)}`:''}</p>${x.note?`<p>${esc(x.note)}</p>`:''}</li>`}).join(''):'<li class="src">No sources added yet.</li>';
 }).catch(fail);
+if(page==='contact'){
+  const f=$('form'),s=$('#status');
+  f.addEventListener('submit',async e=>{
+    e.preventDefault();
+    s.textContent='Sending...';
+    try{
+      const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+      if(!r.ok)throw Error();
+      f.reset();
+      s.textContent='Thanks, your message was sent.';
+    }catch{
+      s.textContent='Something went wrong. Please try again.';
+    }
+  });
+}

@@ -362,3 +362,137 @@ footer.site {
         margin-bottom: .6rem
     }
 }
+
+:root {
+    --navy: #12222f;
+    --gold: #d4a23a;
+    --sage: #e4eee8;
+    --blue: #2d5a87
+}
+
+body {
+    background: #eef2f4
+}
+
+a {
+    color: var(--blue)
+}
+
+header.site {
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold)
+}
+
+.brand {
+    color: #fff
+}
+
+nav a {
+    color: #c3d0db
+}
+
+nav a:hover {
+    color: #fff
+}
+
+nav a[aria-current=page] {
+    color: #fff;
+    border-color: var(--gold)
+}
+
+h1 {
+    color: var(--navy)
+}
+
+h2 {
+    color: var(--accent)
+}
+
+.hero-quote {
+    background: var(--sage);
+    border-left: 5px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 6px 6px 0
+}
+
+.more-quotes blockquote {
+    border-left: 3px solid var(--blue);
+    color: var(--ink)
+}
+
+.list {
+    border-top: 0
+}
+
+.item {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    padding: 1.25rem;
+    margin-top: 1rem
+}
+
+.item:nth-child(even) {
+    border-left-color: var(--blue)
+}
+
+.item:nth-child(3n) {
+    border-left-color: var(--gold)
+}
+
+.thumb {
+    background: var(--sage)
+}
+
+.info {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.5rem 1.5rem
+}
+
+button {
+    background: var(--navy)
+}
+
+button:hover {
+    background: var(--accent)
+}
+
+footer.site {
+    background: var(--navy);
+    color: #c3d0db;
+    border-top: 3px solid var(--gold);
+    padding: 2.5rem 0
+}
+
+.foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem 3rem
+}
+
+.foot p {
+    margin: 0
+}
+
+.foot .fb {
+    font: 600 1.2rem "Newsreader", Georgia, serif;
+    color: #fff;
+    margin-bottom: .25rem
+}
+
+footer.site nav {
+    max-width: 22rem
+}
+
+footer.site nav a {
+    color: #c3d0db
+}
+
+footer.site nav a:hover {
+    color: #fff
+}
