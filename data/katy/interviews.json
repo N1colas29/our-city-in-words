@@ -1,4 +1,61 @@
 [
-  {"id":"sample-one","name":"Sample Interviewee One","anonymous":false,"role":"Title, organization","summary":"One sentence on what this conversation covered.","date":"YYYY-MM-DD","photo":"","photoAlt":"","audio":"","consent":{"interview":null,"record":null,"publish":null,"date":"","note":""},"background":["Who this person is and what they do.","Optional second paragraph."],"transcript":[{"q":"Question you asked?","a":"Their answer, as transcribed."},{"q":"Second question?","a":"Their answer."}]},
-  {"id":"sample-two","name":"Sample Interviewee Two","anonymous":true,"role":"General description, such as 'local business owner'","summary":"One sentence on what this conversation covered.","date":"YYYY-MM-DD","photo":"","photoAlt":"","audio":"","consent":{"interview":null,"record":null,"publish":null,"date":"","note":""},"background":["Only what this person is comfortable sharing."],"transcript":[{"q":"Question you asked?","a":"Their answer."}]}
+  {
+    "id": "sample-one",
+    "name": "Sample Interviewee One",
+    "anonymous": false,
+    "role": "Title, organization",
+    "summary": "One sentence on what this conversation covered.",
+    "date": "YYYY-MM-DD",
+    "photo": "",
+    "photoAlt": "",
+    "audio": "",
+    "consent": {
+      "interview": null,
+      "record": null,
+      "publish": null,
+      "date": "",
+      "note": ""
+    },
+    "background": [
+      "Who this person is and what they do.",
+      "Optional second paragraph."
+    ],
+    "transcript": [
+      {
+        "q": "Question you asked?",
+        "a": "Their answer, as transcribed."
+      },
+      {
+        "q": "Second question?",
+        "a": "Their answer."
+      }
+    ]
+  },
+  {
+    "id": "sample-two",
+    "name": "Sample Interviewee Two",
+    "anonymous": true,
+    "role": "General description, such as 'local business owner'",
+    "summary": "One sentence on what this conversation covered.",
+    "date": "YYYY-MM-DD",
+    "photo": "",
+    "photoAlt": "",
+    "audio": "",
+    "consent": {
+      "interview": null,
+      "record": null,
+      "publish": null,
+      "date": "",
+      "note": ""
+    },
+    "background": [
+      "Only what this person is comfortable sharing."
+    ],
+    "transcript": [
+      {
+        "q": "Question you asked?",
+        "a": "Their answer."
+      }
+    ]
+  }
 ]

@@ -1,1 +1,18 @@
-{"title":"The Story of Katy","intro":"Sample text: a short summary of the narrative you wove from the interviews.","pullQuotes":["Sample pull quote from your synthesis.","A second sample quote.","A third sample quote."],"sections":[{"heading":"Section heading","body":["Sample paragraph of your synthesis.","Another paragraph."]}]}
+{
+    "title": "The Story of Katy",
+    "intro": "Sample text: a short summary of the narrative you wove from the interviews.",
+    "pullQuotes": [
+        "Sample pull quote from your synthesis.",
+        "A second sample quote.",
+        "A third sample quote."
+    ],
+    "sections": [
+        {
+            "heading": "Section heading",
+            "body": [
+                "Sample paragraph of your synthesis.",
+                "Another paragraph."
+            ]
+        }
+    ]
+}
